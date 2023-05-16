@@ -34,9 +34,12 @@ jobs:
     - name: Install Playwright dependencies
       run: |
         shot-scraper install
-    - name: Take shots
+    - name: Take desktop shots
       run: |
-        ./screenshots.sh -v multi sites.txt
+        ./desktop_shots.sh multi sites.txt
+    - name: Take mobile shots
+      run: |
+        ./mobile_shots.sh multi sites.txt
     - name: Commit and push
       run: |-
         ./screenshots.sh gha:update
