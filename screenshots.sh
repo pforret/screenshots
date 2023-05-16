@@ -552,7 +552,7 @@ Script:check() {
 Option:usage() {
   IO:print "Program : ${txtInfo}$script_basename${txtReset}  by ${txtWarn}$script_author${txtReset}"
   IO:print "Version : ${txtInfo}v$script_version${txtReset} (${txtWarn}$script_modified${txtReset})"
-  IO:print "Purpose : ${txtInfo}take the screensots with shotscraper${txtReset}"
+  IO:print "Purpose : ${txtInfo}take screenshots with shotscraper${txtReset}"
   echo -n  "Usage   : $script_basename"
   Option:config |
     awk '

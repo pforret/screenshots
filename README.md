@@ -10,14 +10,14 @@
 
 Let GitHub automatically make screenshots of all your websites
 
-## Installation 
+## Usage 
 
-### Create new repo with this one as template
+Create new repo with this one as template
 
 ![img.png](assets/use_template.png)
 
 
-#### Method 1 (CLI)
+### Method 1 (CLI)
 ```bash
 # clone the new repo to your local machine
 git clone git@github.com:<your username>/<your repo>.git
@@ -40,7 +40,7 @@ git -a -m "new sites"
 git pull
 ```
 
-#### Method 2 (GitHub UI)
+### Method 2 (GitHub UI)
 
 Or just edit the `sites.txt` file on github.com
 
@@ -51,7 +51,32 @@ Or just edit the `sites.txt` file on github.com
 
 You can also run the screenshot process locally on your machine. You will need to install shot-scraper. 
 
-    pip install shot-scraper
+```bash
+# clone the new repo to your local machine
+git clone git@github.com:<your username>/<your repo>.git
+cd <your repo>
+
+# install shot-scraper
+pip install shot-scraper
+
+# remove all images from the images folder
+rm images/*.png
+
+# replace the URLS in sites.txt by your own URLs
+echo "https://www.yoursite.com" > sites.txt
+echo "https://www.yourothersite.com" >> sites.txt
+...
+
+# check in the repo with changes
+git -a -m "new sites"
+
+# wait until Github Actions have run and created all your screenshots
+
+# now get the updated image files
+git pull
+```
+
+## Script screenshots.sh
 
 ```bash
 Program : screenshots.sh  by peter@forret.com
@@ -74,6 +99,7 @@ Flags, options and parameters:
     <input>          : [parameter] input file/text (optional)
  
 ``` 
+
 ## Based on
 
 * [github.com/features/actions](https://github.com/features/actions): Github Actions
