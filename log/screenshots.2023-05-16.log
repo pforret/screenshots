@@ -27,3 +27,10 @@ Screenshot of 'https://news.ycombinator.com' written to 'tmp/news_ycombinator_co
 12:34:22 | [screenshots.sh] ended after 16 secs
 12:34:22 | --------------------------------------------------
 12:34:23 | [screenshots.sh] 0.1.1 started
+12:39:33 | [screenshots.sh] 0.1.1 started
+Screenshot of 'https://www.google.com' written to 'tmp/www_google_com.png'
+Screenshot of 'https://www.nytimes.com' written to 'tmp/www_nytimes_com.png'
+Screenshot of 'https://news.ycombinator.com' written to 'tmp/news_ycombinator_com.png'
+12:39:45 | [screenshots.sh] ended after 13 secs
+12:39:45 | --------------------------------------------------
+12:39:45 | [screenshots.sh] 0.1.1 started
