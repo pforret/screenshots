@@ -26,7 +26,7 @@ option|o|out_dir|output folder for screenshots|images
 option|d|delay|seconds to wait for the git action to finish|80
 option|w|width|screenshot width|1920
 option|h|height|screenshot height|1080
-option|x|export|export list of screenshots in Markdown format|export.md
+option|x|export|export list of screenshots in Markdown format|index.md
 choice|1|action|action to perform|multi,gha:deploy,gha:update,check,env,update
 param|?|input|input file/text
 " grep -v -e '^#' -e '^\s*$'
