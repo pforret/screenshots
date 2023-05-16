@@ -1,4 +1,6 @@
 # test sites
+https://news.ycombinator.com
 https://www.google.com
 https://www.nytimes.com
-https://news.ycombinator.com
+https://www.nytimes.com/games/wordle/
+https://www.nytimes.com/wirecutter/
