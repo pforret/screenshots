@@ -10,6 +10,8 @@ Automatically make screenshots of all your websites
 
 ![img.png](assets/use_template.png)
 
+
+#### Method 1 (CLI)
 ```bash
 # clone the new repo to your local machine
 git clone git@github.com:<your username>/<your repo>.git
@@ -31,6 +33,12 @@ git -a -m "new sites"
 # now get the updated image files
 git pull
 ```
+
+#### Method 2 (GitHub UI)
+
+Or just edit the `sites.txt` file on github.com
+
+![img.png](assets/edit_on_github.png)
 
 ## Based on
 
