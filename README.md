@@ -12,13 +12,16 @@ Automatically make screenshots of all your websites
 
 ```bash
 # clone the new repo to your local machine
-git clone git@github.com:<your username>/<your repo>>.git
+git clone git@github.com:<your username>/<your repo>.git
+cd <your repo>
 
 # remove all images from the images folder
 rm images/*.png
 
 # replace the URLS in sites.txt by your own URLs
 echo "https://www.yoursite.com" > sites.txt
+echo "https://www.yourothersite.com" >> sites.txt
+...
 
 # check in the repo with changes
 git -a -m "new sites"
