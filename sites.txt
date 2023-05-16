@@ -1,4 +1,4 @@
 # test sites
 https://www.google.com
 https://www.nytimes.com
-https://time.is
+https://news.ycombinator.com
