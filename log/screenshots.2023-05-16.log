@@ -1,2 +1,12 @@
 14:20:12 | [screenshots.sh] 0.0.1 started
 14:20:12 | --------------------------------------------------
+12:21:32 | [screenshots.sh] 0.0.1 started
+Screenshot of 'https://www.google.com' written to 'tmp/www_google_com.png'
+12:21:35 | WARNING: could not find [images/www_google_com.png]
+Screenshot of 'https://www.nytimes.com' written to 'tmp/www_nytimes_com.png'
+12:21:42 | WARNING: could not find [images/www_nytimes_com.png]
+Screenshot of 'https://time.is' written to 'tmp/time_is.png'
+12:21:44 | WARNING: could not find [images/time_is.png]
+12:21:44 | [screenshots.sh] ended after 12 secs
+12:21:44 | --------------------------------------------------
+12:21:44 | [screenshots.sh] 0.0.1 started
