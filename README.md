@@ -1,8 +1,14 @@
-# screenshots
+![GH Language](https://img.shields.io/github/languages/top/pforret/screenshots)
+![GH stars](https://img.shields.io/github/stars/pforret/screenshots)
+![GH tag](https://img.shields.io/github/v/tag/pforret/screenshots)
+![GH License](https://img.shields.io/github/license/pforret/screenshots)
+[![Take screenshots](https://github.com/pforret/screenshots/actions/workflows/screenshots.yml/badge.svg)](https://github.com/pforret/screenshots/actions/workflows/screenshots.yml)
+
+# pforret/screenshots
 
 ![](assets/screenshots.jpg)
 
-Automatically make screenshots of all your websites
+Let GitHub automatically make screenshots of all your websites
 
 ## Installation 
 
@@ -40,6 +46,34 @@ Or just edit the `sites.txt` file on github.com
 
 ![img.png](assets/edit_on_github.png)
 
+
+## Run locally
+
+You can also run the screenshot process locally on your machine. You will need to install shot-scraper. 
+
+    pip install shot-scraper
+
+```bash
+Program : screenshots.sh  by peter@forret.com
+Version : v1.0.0 (2023-05-16 15:16)
+Purpose : take the screensots with shotscraper
+Usage   : screenshots.sh [-h] [-q] [-v] [-f] [-l <log_dir>] [-t <tmp_dir>] [-o <out_dir>] [-d <delay>] [-w <width>] [-h <height>] [-x <export>] <action> <input?>
+Flags, options and parameters:
+    -h|--help        : [flag] show usage [default: off]
+    -q|--quiet       : [flag] no output [default: off]
+    -v|--verbose     : [flag] also show debug messages [default: off]
+    -f|--force       : [flag] do not ask for confirmation (always yes) [default: off]
+    -l|--log_dir <?> : [option] folder for log files   [default: log]
+    -t|--tmp_dir <?> : [option] folder for temp files  [default: tmp]
+    -o|--out_dir <?> : [option] output folder for screenshots  [default: images]
+    -d|--delay <?>   : [option] seconds to wait for the git action to finish  [default: 80]
+    -w|--width <?>   : [option] screenshot width  [default: 1920]
+    -h|--height <?>  : [option] screenshot height  [default: 1080]
+    -x|--export <?>  : [option] export list of screenshots in Markdown format  [default: index.md]
+    <action>         : [choice] action to perform  [options: multi,gha:deploy,gha:update,check,env,update]
+    <input>          : [parameter] input file/text (optional)
+ 
+``` 
 ## Based on
 
 * [github.com/features/actions](https://github.com/features/actions): Github Actions
