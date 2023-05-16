@@ -12,3 +12,11 @@ Screenshot of 'https://time.is' written to 'tmp/time_is.png'
 12:21:44 | [screenshots.sh] 0.0.1 started
 14:23:21 | [screenshots.sh] 0.0.1 started
 14:23:22 | --------------------------------------------------
+12:25:28 | [screenshots.sh] 0.0.1 started
+Screenshot of 'https://www.google.com' written to 'tmp/www_google_com.png'
+Screenshot of 'https://www.nytimes.com' written to 'tmp/www_nytimes_com.png'
+Screenshot of 'https://news.ycombinator.com' written to 'tmp/news_ycombinator_com.png'
+12:25:42 | WARNING: could not find [images/news_ycombinator_com.png]
+12:25:42 | [screenshots.sh] ended after 15 secs
+12:25:42 | --------------------------------------------------
+12:25:42 | [screenshots.sh] 0.0.1 started
