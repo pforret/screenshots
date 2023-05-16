@@ -26,7 +26,7 @@ option|o|out_dir|output folder for screenshots|images
 option|d|delay|seconds to wait for the git action to finish|80
 option|w|width|screenshot width|1920
 option|h|height|screenshot height|1080
-option|x|export|export list of screenshots in Markdown format|sites.md
+option|x|export|export list of screenshots in Markdown format|export.md
 choice|1|action|action to perform|multi,gha:deploy,gha:update,check,env,update
 param|?|input|input file/text
 " grep -v -e '^#' -e '^\s*$'
@@ -49,7 +49,8 @@ Script:main() {
     [[ ! -f "$input" ]] && die "Input file [$input] not found"
     Os:require shot-scraper "pip install shot-scraper"
     [[ ! -d "$out_dir" ]] && mkdir -p "$out_dir"
-    echo "# screenshots $(date)" > "$export"
+    export_file="$out_dir/$export"
+    echo "# screenshots $(date)" > "$export_file"
 
     grep -v "^#" "$input" \
     | grep -v '^$' \
@@ -65,8 +66,9 @@ Script:main() {
         temppng="$tmp_dir/$domain.$digest.png"
         output="$out_dir/$domain.$digest.png"
       fi
-      echo "## $site" >> "$export"
-      shot-scraper "$site" -o "$temppng" --width "$width" --height $height --wait 1000 &>> "$log_file"
+      output_name="$(basename "$output")"
+      echo "## $site" >> "$export_file"
+      shot-scraper "$site" -o "$temppng" --width "$width" --height "$height" --wait 1000 &>> "$log_file"
 
       if [[ -f $temppng ]] ; then
           if [[ -f "$output" ]] ; then
@@ -75,8 +77,8 @@ Script:main() {
             IO:log "WARNING: could not find [$output]"
           fi 
           mv "$temppng" "$output"
-	  echo "![$site]($output)" >> "$export"
-	  echo " " >> "$export"
+	  echo "![$site]($output_name)" >> "$export_file"
+	  echo " " >> "$export_file"
           IO:print "$output"
       fi
     done 
